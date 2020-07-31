@@ -2,7 +2,7 @@ const socket = io('/')
 const videoGrid = document.getElementById('video-grid')
 const myPeer = new Peer(undefined, {
   key: 'peerjs'
-  host: 'dplumly-video-chating.herokuapp.com/',
+  host: 'video-chatting-app.herokuapp.com//',
   secure: true,
   port: 443
 })
