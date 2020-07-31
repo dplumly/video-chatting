@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="main.css">
+
+	<script>
+		const ROOM_ID = "<%= roomId %>"
+	</script>
+	<script defer src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+	<script src="/socket.io/socket.io.js" defer></script>
+	<script src="script.js" defer></script>
+	<title>Web RTC Video Chat</title>
+</head>
+
+<body>
+	<div id="container">
+		<div id="video-grid"></div>
+		<footer>
+			<ul>
+				<li>
+					<button id="select" onclick="colorchange('select'); muteVideo()"
+						style="background:rgb(3,175,255);"><span class="camera"></span></button>
+				</li>
+				<li>
+					<button id="select1" onclick="colorchange('select1'); muteMicrophone()"
+						style="background:rgb(3,175,255);"><span class="mic"></span></button>
+				</li>
+				<li>
+					<button id="select2" onclick="location.href='callEnded.html'"><span class="cancel"></span></button>
+				</li>
+			</ul>
+		</footer>
+	</div>
+</body>
+
+</html>
