@@ -1,10 +1,11 @@
 const socket = io('/')
 const videoGrid = document.getElementById('video-grid')
 const myPeer = new Peer(undefined, {
-  key: 'peerjs',
-  host: 'video-chatting-app.herokuapp.com//',
   secure: true,
-  port: 443
+  host: 'dplumly-video-chat.herokuapp.com/',
+  port: '443',
+  key: 'peerjs'
+  // path: '/video-chat',
 })
 
 // Creating the <video> tag and muting the audio of your own feed
